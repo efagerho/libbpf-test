@@ -1,0 +1,13 @@
+[package]
+name = "libbpf-test"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.98"
+libbpf-rs = { version = "0.25.0", features = [ "libbpf-sys" ] }
+num_cpus = "1.17.0"
+
+[build-dependencies]
+libbpf-cargo = "0.25.0"
+vmlinux = { git = "https://github.com/libbpf/vmlinux.h.git", rev = "83a228cf37fc65f2d14e4896a04922b5ee531a94" }
